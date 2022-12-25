@@ -5,24 +5,43 @@ $(document).ready(() => {
     const rightButton = $("#right");
     const leftButton = $("#left");
 
-    var direction;
+    const rightArrow = $("#right img");
+    const leftArrow = $("#left img");
+
+    let direction;
 
     rightButton.on("click", () => {
         direction = true;
-        let firstItemWidth = firstSlider.children().last().width();
-        let secondItemWidth = secondSlider.children().first().width();
+        let firstItemWidth = firstSlider.children().last().width() + 10;
+        let secondItemWidth = secondSlider.children().last().width() + 10;
 
         firstSlider.css("transform", `translate(${firstItemWidth}px)`);
+        secondSlider.css("transform", `translate(${secondItemWidth}px)`);
+    });
+
+    leftButton.on("click", () => {
+        direction = false;
+        let firstItemWidth = firstSlider.children().first().width() + 10;
+        let secondItemWidth = secondSlider.children().first().width() + 10;
+
+        firstSlider.css("transform", `translate(-${firstItemWidth}px)`);
         secondSlider.css("transform", `translate(-${secondItemWidth}px)`);
+    });
 
-        $("#right img").attr("src", "./assets/arrow-gray-right.png");
+    rightButton.hover(() => {
+        rightArrow.attr("src", "./assets/arrow-blue-right.png");
         rightButton.addClass("button-border");
+    }, () => {
+        rightArrow.attr("src", "./assets/arrow-gray-right.png");
+        rightButton.removeClass("button-border");
+    });
 
-        setTimeout(() => {
-            $("#right img").attr("src", "./assets/arrow-blue-right.png");
-            rightButton.removeClass("button-border");
-        }, 1000);
-
+    leftButton.hover(() => {
+        leftArrow.attr("src", "./assets/arrow-blue-left.png");
+        leftButton.addClass("button-border");
+    }, () => {
+        leftArrow.attr("src", "./assets/arrow-gray-left.png");
+        leftButton.removeClass("button-border");
     });
 
     firstSlider.on("transitionend", () => {
@@ -32,7 +51,7 @@ $(document).ready(() => {
         if (direction) {
             firstSlider.prepend(last);
         } else {
-            firstSlider.append(first);
+            firstSlider.append(first.hide().fadeIn(1000));
         }
 
         firstSlider.css("transition", "none");
@@ -44,32 +63,14 @@ $(document).ready(() => {
 
     });
 
-    leftButton.on("click", () => {
-        direction = false;
-        let firstItemWidth = firstSlider.children().first().width();
-        let secondItemWidth = secondSlider.children().last().width();
-
-        firstSlider.css("transform", `translate(-${firstItemWidth}px)`);
-        secondSlider.css("transform", `translate(${secondItemWidth}px)`);
-
-        $("#left img").attr("src", "./assets/arrow-gray-left.png");
-        leftButton.addClass("button-border");
-
-        setTimeout(() => {
-            $("#left img").attr("src", "./assets/arrow-blue-left.png");
-            leftButton.removeClass("button-border");
-        }, 1000);
-
-    });
-
     secondSlider.on("transitionend", () => {
         let first = secondSlider.children().first();
         let last = secondSlider.children().last();
 
         if (direction) {
-            secondSlider.append(first);
-        } else {
             secondSlider.prepend(last);
+        } else {
+            secondSlider.append(first.hide().fadeIn(1000));
         }
 
         secondSlider.css("transition", "none");

@@ -1,86 +1,124 @@
 body {
     margin: 0;
-    font-family: 'SourceSansPro';
+    background-color: #F2F2F2;
+    font-family: 'Source Sans Pro';
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 55px;
 }
 
-section {
+header {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 19px;
+}
+
+.first-header-box {
+    width: 621px;
     height: 100px;
+    background: #DDDDDD;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.second-header-box {
+    width: 301px;
+    height: 100px;
+    background: #DDDDDD;
+    border-radius: 0px 0px 5px 5px;
+}
+
+footer {
+    width: 941px;
+    height: 100px;
+    background-color: #DDDDDD;
+    border-radius: 5px 5px 0px 0px;
+
 }
 
 .container {
-    position: absolute;
-    top: 20%;
-    height: 450px;
-    width: 81%;
+    max-width: 940px;
     display: flex;
     flex-direction: row;
 }
 
-/*********** Slider css ***********/
 .slider-container {
-    width: 75%;
+    width: 65%;
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .first-slider,
 .second-slider {
+    height: 200px;
     display: flex;
     gap: 10px;
     transition: all 1s;
+}
+
+img {
+    height: 200px;
+    border-radius: 5px;
+    width: auto;
 }
 
 .slider-items-arrows {
     display: flex;
 }
 
-section img {
-    border-radius: 10px;
-}
-
-/*********** Slider css ***********/
-
-
-/*********** Button css ***********/
 .arrow-buttons {
     width: 20%;
+    height: 200px;
+    background-color: #F2F2F2;
     padding-left: 130px;
+    margin-bottom: 0px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: white;
     z-index: 10;
 }
 
 .button-border {
-    border: 1px solid #DADADA;
+    border: 1px solid #134880;
 }
 
 button {
     width: 60px;
     height: 60px;
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #134880;
-    background-color: white;
+    border: 1px solid #DADADA;
 }
 
-/*********** Button css ***********/
+button img {
+    width: 9.98px;
+    height: 16px;
+}
 
-/*********** Description css ***********/
 .slider-description {
-    width: 296px;
-    background-color: white;
-    padding-left: 30px;
-    padding-right: 30px;
+    width: 301px;
+    height: 410px;
+    padding-left: 20px;
     z-index: 10;
+    background-color: #F2F2F2;
+}
+
+.desc-wrapper {
+    width: 301px;
+    height: 296px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .desc-title {
     margin-top: 0px;
+    margin-bottom: 0px;
     font-size: 32px;
     line-height: 38px;
     color: #134880;
@@ -88,10 +126,10 @@ button {
 }
 
 .desc-text {
+    margin-top: 0px;
+    margin-bottom: 0px;
     font-size: 18px;
     line-height: 26px;
     letter-spacing: -0.2px;
     color: #484A4C;
 }
-
-/*********** Description css ***********/

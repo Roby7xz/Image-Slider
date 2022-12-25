@@ -1,0 +1,28 @@
+{
+  "name": "image-slider",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "transpile": "babel ./js/script.js --out-file ./js/script.transpiled.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roby7xz/Image-Slider.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Roby7xz/Image-Slider/issues"
+  },
+  "homepage": "https://github.com/Roby7xz/Image-Slider#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.7"
+  }
+}

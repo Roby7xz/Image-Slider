@@ -6,57 +6,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>Image Slider</title>
 </head>
 
 <body>
-
+    <header>
+        <div class="first-header-box">
+            Other Items - Header
+        </div>
+        <div class="second-header-box">
+        </div>
+    </header>
     <div class="container">
         <div class="slider-container">
             <div class="first-slider">
-                <section><img width="260px" src="./assets/slider-image-1.jpg" alt="img1" /></section>
-                <section><img width="120px" src="./assets/slider-image-2.jpg" alt="img1" /></section>
-                <section><img width="180px" src="./assets/slider-image-3.jpg" alt="img1" /></section>
-                <section><img width="220px" src="./assets/slider-image-4.jpg" alt="img1" /></section>
-                <section><img width="260px" src="./assets/slider-image-5.jpg" alt="img1" /></section>
-                <section><img width="120px" src="./assets/slider-image-6.jpg" alt="img1" /></section>
-                <section><img width="180px" src="./assets/slider-image-7.jpg" alt="img1" /></section>
-                <section><img width="180px" src="./assets/slider-image-8.jpg" alt="img1" /></section>
-                <section><img width="220px" src="./assets/slider-image-9.jpg" alt="img1" /></section>
+                <img src="./assets/slider-image-1.jpg" alt="img1" />
+                <img src="./assets/slider-image-2.jpg" alt="img2" />
+                <img src="./assets/slider-image-3.jpg" alt="img3" />
+                <img src="./assets/slider-image-4.jpg" alt="img4" />
+                <img src="./assets/slider-image-5.jpg" alt="img5" />
+                <img src="./assets/slider-image-6.jpg" alt="img6" />
+                <img src="./assets/slider-image-7.jpg" alt="img7" />
+                <img src="./assets/slider-image-8.jpg" alt="img8" />
+                <img src="./assets/slider-image-9.jpg" alt="img9" />
             </div>
 
             <div class="slider-items-arrows">
                 <div class="second-slider">
-                    <section><img width="220px" src="./assets/slider-image-9.jpg" alt="img1" /></section>
-                    <section><img width="180px" src="./assets/slider-image-8.jpg" alt="img1" /></section>
-                    <section><img width="180px" src="./assets/slider-image-7.jpg" alt="img1" /></section>
-                    <section><img width="120px" src="./assets/slider-image-6.jpg" alt="img1" /></section>
-                    <section><img width="260px" src="./assets/slider-image-5.jpg" alt="img1" /></section>
-                    <section><img width="220px" src="./assets/slider-image-4.jpg" alt="img1" /></section>
-                    <section><img width="180px" src="./assets/slider-image-3.jpg" alt="img1" /></section>
-                    <section><img width="120px" src="./assets/slider-image-2.jpg" alt="img1" /></section>
-                    <section><img width="260px" src="./assets/slider-image-1.jpg" alt="img1" /></section>
+                    <img src="./assets/slider-image-9.jpg" alt="img9" />
+                    <img src="./assets/slider-image-8.jpg" alt="img8" />
+                    <img src="./assets/slider-image-7.jpg" alt="img7" />
+                    <img src="./assets/slider-image-6.jpg" alt="img6" />
+                    <img src="./assets/slider-image-5.jpg" alt="img5" />
+                    <img src="./assets/slider-image-4.jpg" alt="img4" />
+                    <img src="./assets/slider-image-3.jpg" alt="img3" />
+                    <img src="./assets/slider-image-2.jpg" alt="img2" />
+                    <img src="./assets/slider-image-1.jpg" alt="img1" />
                 </div>
 
                 <div class="arrow-buttons">
-                    <button id="left"><img src="./assets/arrow-blue-left.png" alt="left" /></button>
-                    <button id="right"><img src="./assets/arrow-blue-right.png" alt="right" /></button>
+                    <button id="left"><img class="arrow-img" src="./assets/arrow-gray-left.png" alt="left" /></button>
+                    <button id="right"><img class="arrow-img" src="./assets/arrow-gray-right.png"
+                            alt="right" /></button>
                 </div>
             </div>
         </div>
         <div class="slider-description">
-            <h3 class="desc-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
-            <span class="desc-text">
-                Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-                ex ea commodo consequat.
-                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
-            </span>
+            <div class="desc-wrapper">
+                <h3 class="desc-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                <p class="desc-text">
+                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                    aliquip
+                    ex ea commodo consequat.
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
+                </p>
+            </div>
         </div>
     </div>
 
-
-    <script type="text/javascript" src="./js/script.js"></script>
+    <footer>Other Items - Footer</footer>
+    <script defer type="text/javascript" src="./js/script.js"></script>
 </body>
 
 </html>
