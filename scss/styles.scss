@@ -1,0 +1,104 @@
+@use "vars";
+@use "mixins";
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro';
+    overflow: hidden;
+    background-color: vars.$body-background-color;
+    @include mixins.flex($flex-direction: column, $justify-content: flex-end, $align-items: flex-end, $gap: vars.$gap-lg);
+}
+
+header {
+    @include mixins.flex($flex-direction: row-reverse, $gap: calc(vars.$gap-md - 1px));
+
+    .first-header-box {
+        @include mixins.header-footer-box($width: 621px,
+            $height: vars.$hf-height,
+            $background-color: vars.$hf-background-color,
+            $border-radius: vars.$header-border-radius );
+    }
+
+    .second-header-box {
+        @include mixins.header-footer-box($width: 301px,
+            $height: vars.$hf-height,
+            $background-color: vars.$hf-background-color,
+            $border-radius: vars.$header-border-radius );
+    }
+}
+
+footer {
+    @include mixins.header-footer-box($width: 941px,
+        $height: vars.$hf-height,
+        $background-color: vars.$hf-background-color,
+        $border-radius: vars.$footer-border-radius );
+}
+
+.container {
+    max-width: 940px;
+    @include mixins.flex($flex-direction: row);
+}
+
+.slider-container {
+    width: 65%;
+    @include mixins.flex($justify-content: flex-end, $align-items: flex-end, $gap: vars.$gap-sm);
+    flex-wrap: wrap;
+
+    .first-slider,
+    .second-slider {
+        height: vars.$img-height;
+        @include mixins.flex($gap: vars.$gap-sm);
+        transition: all 1s;
+
+        img {
+            height: vars.$img-height;
+            border-radius: 5px;
+            width: auto;
+        }
+    }
+
+    .slider-items-arrows {
+        @include mixins.flex();
+    }
+}
+
+.arrow-buttons {
+    height: vars.$img-height;
+    background-color: vars.$body-background-color;
+    padding-left: 130px;
+    @include mixins.flex($flex-direction: column, $gap: vars.$gap-sm);
+    z-index: 1;
+}
+
+.button-border {
+    border: vars.$hover-button-border
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    @include mixins.flex($justify-content: center, $align-items: center, $gap: vars.$gap-sm);
+    border-radius: 5px;
+    background-color: vars.$body-background-color;
+    border: vars.$default-button-border;
+
+    img {
+        width: 9.98px;
+        height: 16px;
+    }
+}
+
+.desc-wrapper {
+    padding-left: 20px;
+    z-index: 1;
+    background-color: vars.$body-background-color;
+    @include mixins.flex($flex-direction: column, $gap: vars.$gap-md);
+
+    .desc-title {
+        @include mixins.text($font-size: 32px, $line-height: 38px, $color: vars.$title-color);
+    }
+
+    .desc-text {
+        @include mixins.text($font-size: 18px, $line-height: 26px, $color: vars.$text-color);
+    }
+}

@@ -1,0 +1,23 @@
+@mixin flex ($flex-direction: null, $justify-content: null, $align-items: null, $gap: null) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+}
+
+@mixin header-footer-box ($width, $height, $background-color, $border-radius) {
+    width: $width;
+    height: $height;
+    background-color: $background-color;
+    border-radius: $border-radius;
+}
+
+@mixin text ($font-size, $line-height, $color) {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    letter-spacing: -0.2px;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
+}

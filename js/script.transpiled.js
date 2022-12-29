@@ -10,17 +10,17 @@ $(document).ready(function () {
   var direction;
   rightButton.on("click", function () {
     direction = true;
-    var firstItemWidth = firstSlider.children().last().width();
-    var secondItemWidth = secondSlider.children().first().width();
-    firstSlider.css("transform", "translate(".concat(firstItemWidth, "px)"));
-    secondSlider.css("transform", "translate(-".concat(secondItemWidth, "px)"));
+    var lastFSItemWidth = firstSlider.children().last().width() + 10;
+    var lastSSItemWidth = secondSlider.children().last().width() + 10;
+    firstSlider.css("transform", "translate(".concat(lastFSItemWidth, "px)"));
+    secondSlider.css("transform", "translate(".concat(lastSSItemWidth, "px)"));
   });
   leftButton.on("click", function () {
     direction = false;
-    var firstItemWidth = firstSlider.children().first().width();
-    var secondItemWidth = secondSlider.children().last().width();
-    firstSlider.css("transform", "translate(-".concat(firstItemWidth, "px)"));
-    secondSlider.css("transform", "translate(".concat(secondItemWidth, "px)"));
+    var firstFSItemWidth = firstSlider.children().first().width() + 10;
+    var firstSSItemWidth = secondSlider.children().first().width() + 10;
+    firstSlider.css("transform", "translate(-".concat(firstFSItemWidth, "px)"));
+    secondSlider.css("transform", "translate(-".concat(firstSSItemWidth, "px)"));
   });
   rightButton.hover(function () {
     rightArrow.attr("src", "./assets/arrow-blue-right.png");
@@ -42,7 +42,7 @@ $(document).ready(function () {
     if (direction) {
       firstSlider.prepend(last);
     } else {
-      firstSlider.append(first);
+      firstSlider.append(first.hide().fadeIn(1000));
     }
     firstSlider.css("transition", "none");
     firstSlider.css("transform", "translate(0)");
@@ -54,9 +54,9 @@ $(document).ready(function () {
     var first = secondSlider.children().first();
     var last = secondSlider.children().last();
     if (direction) {
-      secondSlider.append(first);
-    } else {
       secondSlider.prepend(last);
+    } else {
+      secondSlider.append(first.hide().fadeIn(1000));
     }
     secondSlider.css("transition", "none");
     secondSlider.css("transform", "translate(0)");

@@ -12,20 +12,20 @@ $(document).ready(() => {
 
     rightButton.on("click", () => {
         direction = true;
-        let firstItemWidth = firstSlider.children().last().width() + 10;
-        let secondItemWidth = secondSlider.children().last().width() + 10;
+        let lastFSItemWidth = firstSlider.children().last().width() + 10;
+        let lastSSItemWidth = secondSlider.children().last().width() + 10;
 
-        firstSlider.css("transform", `translate(${firstItemWidth}px)`);
-        secondSlider.css("transform", `translate(${secondItemWidth}px)`);
+        firstSlider.css("transform", `translate(${lastFSItemWidth}px)`);
+        secondSlider.css("transform", `translate(${lastSSItemWidth}px)`);
     });
 
     leftButton.on("click", () => {
         direction = false;
-        let firstItemWidth = firstSlider.children().first().width() + 10;
-        let secondItemWidth = secondSlider.children().first().width() + 10;
+        let firstFSItemWidth = firstSlider.children().first().width() + 10;
+        let firstSSItemWidth = secondSlider.children().first().width() + 10;
 
-        firstSlider.css("transform", `translate(-${firstItemWidth}px)`);
-        secondSlider.css("transform", `translate(-${secondItemWidth}px)`);
+        firstSlider.css("transform", `translate(-${firstFSItemWidth}px)`);
+        secondSlider.css("transform", `translate(-${firstSSItemWidth}px)`);
     });
 
     rightButton.hover(() => {
